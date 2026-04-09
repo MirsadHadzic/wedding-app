@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nejra & Mirsad | Vjenčanje</title>
+  <link rel="icon" type="image/x-icon" href="farzadlawcom_210707856.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button id="backToTop" title="Nazad na vrh"><i class="fas fa-chevron-up"></i></button>
+
+  <div class="music-wrapper" onclick="toggleMusic()">
+    <span id="musicText">Pusti muziku</span>
+    <div class="music-icon"><i id="musicIcon" class="fas fa-play"></i></div>
+    <audio id="bgMusic" loop>
+      <source src="Ženim Se.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2 class="subtitle">Sačuvaj datum</h2>
+      <h1>Nejra <span>&</span> Mirsad</h1>
+      <p class="date">25. Juli 2026 • Sarajevo</p>
+      
+      <div id="countdown">
+        <div class="time-box"><span id="days">00</span><small>Dana</small></div>
+        <div class="time-box"><span id="hours">00</span><small>Sati</small></div>
+        <div class="time-box"><span id="minutes">00</span><small>Minuta</small></div>
+        <div class="time-box"><span id="seconds">00</span><small>Sekundi</small></div>
+      </div>
+      <div class="scroll-indicator" onclick="scrollDown()">↓</div>
+    </div>
+  </section>
+
+  <section id="start" class="timeline-section">
+    <h2 class="section-title">Naš specijalni dan</h2>
+    <div class="timeline-container">
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-heart"></i></div>
+        <div class="timeline-content"><h3>08:00</h3><p>Mladoženja kupi mladu</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-home"></i></div>
+        <div class="timeline-content"><h3>10:00</h3><p>Dolazak do mladoženjine kuće</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-ring"></i></div>
+        <div class="timeline-content"><h3>12:00</h3><p>Općinsko Vjenčanje</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-mosque"></i></div>
+        <div class="timeline-content"><h3>14:00</h3><p>Šerijatsko Vjenčanje</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-camera"></i></div>
+        <div class="timeline-content"><h3>15:00</h3><p>Fotografisanje</p></div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-icon"><i class="fas fa-glass-cheers"></i></div>
+        <div class="timeline-content"><h3>18:00</h3><p>Svadba - Vrelo Faletići</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="map reveal">
+    <h2 class="section-title">Lokacija</h2>
+    <div class="map-wrapper">
+        <iframe src="https://maps.google.com/maps?q=Vrelo%20Faletići%20Sarajevo&t=k&z=17&ie=UTF8&iwloc=&output=embed&maptype=satellite" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section class="toast-section reveal">
+    <h2 class="section-title">Poruka za mladence</h2>
+    <div class="toast-input-container">
+        <input type="text" id="guestName" placeholder="Vaše ime">
+        <textarea id="guestMessage" placeholder="Napišite želju..."></textarea>
+        <button class="btn-gold" onclick="sendToast()">Pošalji čestitku 🥂</button>
+    </div>
+    <div id="toastDisplay"></div>
+  </section>
+
+  <section class="drive reveal">
+    <div class="glass-card">
+        <h2>Podijelite uspomene</h2>
+        <a href="https://photos.app.goo.gl/aTbm4rHH94WeX4JM9" class="btn-gold" target="_blank">Upload Photos <i class="fas fa-cloud-upload-alt"></i></a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
